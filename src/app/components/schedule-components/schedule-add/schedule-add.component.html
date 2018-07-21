@@ -1,0 +1,14 @@
+<!--<div *ngIf="parent">-->
+<form (submit) = "addSchedule( description.value)">
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control"  [(ngModel)]="schedule.description" id="description" name="description" #description tabindex="2">
+  </div>
+
+  <button class="btn btn-outline-info" type="submit"   > Submit</button>
+
+</form>
+
+<button class="btn btn-info" (click)="goBack()"> Back</button>
+
+<!--</div>-->

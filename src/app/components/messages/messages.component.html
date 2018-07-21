@@ -1,0 +1,16 @@
+
+  <div class="container">
+    <div class="col-sm-4">
+      <div class="alert alert-info" *ngIf="messageService.messages.length">
+
+        <h2>Messages</h2>
+
+        <div *ngFor='let message of messageService.messages'> {{message}}</div>
+      </div>
+
+    </div>
+    <div class="col-sm-1">
+      <button *ngIf="messageService.messages.length" type="button" class ="btn btn-warning" (click)="messageService.clear()">Clear</button>
+    </div>
+  </div>
+

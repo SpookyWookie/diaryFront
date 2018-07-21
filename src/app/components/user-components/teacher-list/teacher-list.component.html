@@ -1,0 +1,36 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Name <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Surname <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Birthdate <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Username <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Email <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Jmbg <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let teacher of teachers$ | async" [routerLink]="'/pupil/'+ teacher.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{teacher.id}}</td>
+      <td>{{teacher.name}}</td>
+      <td>{{teacher.surname}}</td>
+      <td>{{teacher.birthdate}}</td>
+      <td>{{teacher.username}}</td>
+      <td>{{teacher.email}}</td>
+      <td>{{teacher.jmbg}}</td>
+      <td><button class="btn btn-link" (click)="onEditTeacher(teacher.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteTeacher(teacher.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addTeacher()"> Add Pupil</button>
+
+</div>
+

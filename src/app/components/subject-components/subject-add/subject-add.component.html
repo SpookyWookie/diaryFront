@@ -1,0 +1,30 @@
+<!--<div *ngIf="parent">-->
+<form (submit) = "addSubject(name.value, description.value, LessonsInAWeek.value, SemesterFund.value, year.value)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control"  [(ngModel)]="subject.name" id="name" name="name" #name tabindex="1">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control"  [(ngModel)]="subject.description" id="description" name="description" #description tabindex="2">
+  </div>
+  <div class="form-group">
+    <label for="LessonsInAWeek">Lessons per week:</label>
+    <input type="number" class="form-control" [(ngModel)]="subject.lessonsInAWeek"  id="LessonsInAWeek" name="LessonsInAWeek" #LessonsInAWeek tabindex="3">
+  </div>
+  <div class="form-group">
+    <label for="SemesterFund">Semester lessons fund:</label>
+    <input type="number" class="form-control" [(ngModel)]="subject.semesterlessonsfund" id="SemesterFund" name="SemesterFund" #SemesterFund tabindex="4">
+  </div>
+
+  <div class="form-group">
+    <label for="year">Year:</label>
+    <input type="number" class="form-control" [(ngModel)]="subject.year" id="year" name="year" #year tabindex="5">
+  </div>
+  <button class="btn btn-outline-info" type="submit"   > Submit</button>
+
+</form>
+
+<button class="btn btn-info" (click)="goBack()"> Back</button>
+
+<!--</div>-->

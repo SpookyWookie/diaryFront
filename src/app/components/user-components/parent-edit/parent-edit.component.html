@@ -1,0 +1,31 @@
+<div *ngIf="parent">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.name" id="name">
+  </div>
+  <div class="form-group">
+    <label for="surname">Surname:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.surname" id="surname">
+  </div>
+  <div class="form-group">
+    <label for="Jmbg">Jmbg:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.jmbg" id="Jmbg">
+  </div>
+  <div class="form-group">
+    <label for="email">email:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.email" id="email">
+  </div>
+
+  <div class="form-group">
+    <label for="username">username:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.username" id="username">
+  </div>
+
+  <div class="form-group">
+    <label for="birthdate">birthdate:</label>
+    <input type="text" class="form-control" [(ngModel)]="parent.birthdate" id="birthdate">
+  </div>
+  <button class="btn btn-danger" (click)="save()"> Submit</button>
+  <button class="btn btn-info" (click)="goBack()"> Back</button>
+
+</div>

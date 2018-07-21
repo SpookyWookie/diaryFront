@@ -1,0 +1,20 @@
+<div *ngIf="schedule">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        ID: {{schedule.id}}
+      </div>
+      <div class="col-sm-4">
+        Description: {{schedule.description}}
+      </div>
+    </div>
+
+    <!--<div class="row">-->
+    <!--<div class="col-sm-12">-->
+    <!--<div *ngFor="let grade of parent.grades"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+  </div>
+  <button class="btn btn-info" (click)="onEditSchedule(schedule.id)"><span class="fa fa-edit"></span> </button>
+  <button class="btn btn-info" (click)="goBack()"> go back</button>
+</div>

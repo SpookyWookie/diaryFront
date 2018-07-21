@@ -1,0 +1,40 @@
+<!--<div *ngIf="parent">-->
+  <form (submit) = "addPupil(name.value, surname.value, username.value, password.value, email.value, jmbg.value, birthdate.value)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control"  [(ngModel)]="pupil.name" id="name" name="name" #name tabindex="1">
+  </div>
+  <div class="form-group">
+    <label for="surname">Surname:</label>
+    <input type="text" class="form-control"  [(ngModel)]="pupil.surname" id="surname" name="surname" #surname tabindex="2">
+  </div>
+  <div class="form-group">
+    <label for="Jmbg">Jmbg:</label>
+    <input type="text" class="form-control" [(ngModel)]="pupil.jmbg"  id="Jmbg" name="jmbg" #jmbg tabindex="3">
+  </div>
+  <div class="form-group">
+    <label for="email">email:</label>
+    <input type="email" class="form-control" [(ngModel)]="pupil.email" id="email" name="email" #email tabindex="4">
+  </div>
+
+  <div class="form-group">
+    <label for="password">password:</label>
+    <input type="password" class="form-control" [(ngModel)]="pupil.password" id="password" name="password" #password tabindex="5">
+  </div>
+
+  <div class="form-group">
+    <label for="username">username:</label>
+    <input type="text" class="form-control"  [(ngModel)]="pupil.username" id="username" name="username" #username tabindex="6">
+  </div>
+
+  <div class="form-group">
+    <label for="birthdate">birthdate:</label>
+    <input type="text" class="form-control"  [(ngModel)]="pupil.birthdate" id="birthdate" name="birthdate" #birthdate tabindex="7">
+  </div>
+  <button class="btn btn-outline-info" type="submit"   > Submit</button>
+
+  </form>
+
+  <button class="btn btn-info" (click)="goBack()"> Back</button>
+
+<!--</div>-->

@@ -1,0 +1,33 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Name <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Description <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>LessonsInAWeek <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Semmester lesson fund <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Year <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let subject of subjects$ | async" [routerLink]="'/subject/'+ subject.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{subject.id}}</td>
+      <td>{{subject.name}}</td>
+      <td>{{subject.description}}</td>
+      <td>{{subject.lessonsInAWeek}}</td>
+      <td>{{subject.semesterlessonsfund}}</td>
+      <td>{{subject.year}}</td>
+      <td><button class="btn btn-link" (click)="onEditSubject(subject.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteSubject(subject.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addSubject()"> Add Pupil</button>
+
+</div>

@@ -1,0 +1,36 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Name <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Surname <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Birthdate <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Username <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Email <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Jmbg <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pupil of pupils$ | async" [routerLink]="'/pupil/'+ pupil.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{pupil.id}}</td>
+      <td>{{pupil.name}}</td>
+      <td>{{pupil.surname}}</td>
+      <td>{{pupil.birthdate}}</td>
+      <td>{{pupil.username}}</td>
+      <td>{{pupil.email}}</td>
+      <td>{{pupil.jmbg}}</td>
+      <td><button class="btn btn-link" (click)="onEditPupil(pupil.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deletePupil(pupil.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addPupil()"> Add Pupil</button>
+
+</div>
+

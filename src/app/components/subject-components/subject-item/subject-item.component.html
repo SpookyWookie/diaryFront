@@ -1,0 +1,33 @@
+<div *ngIf="subject">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        ID: {{subject.id}}
+      </div>
+      <div class="col-sm-4">
+        Name: {{subject.name}}
+      </div>
+      <div class="col-sm-4">
+        Description: {{subject.description}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        Lessons fund: {{subject.semesterlessonsfund}}
+      </div>
+      <div class="col-sm-4">
+        Week lesson fund: {{subject.lessonsInAWeek}}
+      </div>
+      <div class="col-sm-4">
+        Year: {{subject.year}}
+      </div>
+    </div>
+    <!--<div class="row">-->
+    <!--<div class="col-sm-12">-->
+    <!--<div *ngFor="let grade of parent.grades"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+  </div>
+  <button class="btn btn-info" (click)="onEditSubject(subject.id)"><span class="fa fa-edit"></span> </button>
+  <button class="btn btn-info" (click)="goBack()"> go back</button>
+</div>

@@ -1,0 +1,35 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Name <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Surname <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Birthdate <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Username <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Email <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Jmbg <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let parent of parents$ | async" [routerLink]="'/pupil/'+ parent.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{parent.id}}</td>
+      <td>{{parent.name}}</td>
+      <td>{{parent.surname}}</td>
+      <td>{{parent.birthdate}}</td>
+      <td>{{parent.username}}</td>
+      <td>{{parent.email}}</td>
+      <td>{{parent.jmbg}}</td>
+      <td><button class="btn btn-link" (click)="onEditParent(parent.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteParent(parent.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addParent()"> Add Pupil</button>
+
+</div>

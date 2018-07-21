@@ -1,0 +1,25 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Description <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let schedule of schedules$ | async" [routerLink]="'/schedule/'+ schedule.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{schedule.id}}</td>
+      <td>{{schedule.description}}</td>
+      <td><button class="btn btn-link" (click)="onEditSchedule(schedule.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteSchedule(schedule.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addSchedule()"> Add Pupil</button>
+
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="schedule">
+
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <input type="text" class="form-control" [(ngModel)]="schedule.description" id="description">
+  </div>
+
+
+
+  <button class="btn btn-danger" (click)="save()"> Submit</button>
+  <button class="btn btn-info" (click)="goBack()"> Back</button>
+
+</div>
