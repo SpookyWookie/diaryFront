@@ -13,7 +13,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let parent of parents$ | async" [routerLink]="'/pupil/'+ parent.id">
+    <tr *ngFor="let parent of parents$ | async" [routerLink]="'/parent/'+ parent.id">
       <!--<th scope="row">{{parent.id}} </th>-->
       <td>{{parent.id}}</td>
       <td>{{parent.name}}</td>

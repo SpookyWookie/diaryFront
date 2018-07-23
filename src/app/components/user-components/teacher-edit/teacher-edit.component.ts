@@ -17,6 +17,7 @@ export class TeacherEditComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private teacherService: TeacherService, private router: Router) { }
 
   ngOnInit() {
+    this.getTeacher();
   }
 
   getTeacher(): void {

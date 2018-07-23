@@ -1,0 +1,30 @@
+<div *ngIf="grade">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
+        ID: {{grade.id}}
+      </div>
+      <div class="col-sm-4">
+        Name: {{grade.comment}}
+      </div>
+      <div class="col-sm-4">
+        Surname: {{grade.gradeType}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        Username: {{grade.dateOfGrading}}
+      </div>
+      <div class="col-sm-4">
+        Birthdate: {{grade.gradeValue}}
+      </div>
+    </div>
+    <!--<div class="row">-->
+    <!--<div class="col-sm-12">-->
+    <!--<div *ngFor="let grade of parent.grades"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+  </div>
+  <button class="btn btn-info" (click)="onEditGrade(grade.id)"><span class="fa fa-edit"></span> </button>
+  <button class="btn btn-info" (click)="goBack()"> go back</button>
+</div>

@@ -1,0 +1,29 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Enumeratio <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Year <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let department of departments$ | async" [routerLink]="'/department/'+ department.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{department.id}}</td>
+      <td>{{department.enumeration}}</td>
+      <td>{{department.year}}</td>
+
+      <td><button class="btn btn-link" (click)="onEditDepartment(department.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteDepartment(department.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addDepartment()"> Add Pupil</button>
+
+</div>

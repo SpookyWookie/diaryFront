@@ -1,0 +1,40 @@
+<!--<div *ngIf="parent">-->
+<form (submit) = "addDepartment(enum.value, year.value)">
+  <div class="form-group">
+    <label for="enum">Enumeration :</label>
+    <input type="text" class="form-control"  [(ngModel)]="department.enumeration" id="enum" name="enum" #enum tabindex="1">
+  </div>
+  <div class="form-group">
+    <label for="year">Year:</label>
+    <input type="number" class="form-control"  [(ngModel)]="department.year" id="year" name="year" #year tabindex="2">
+  </div>
+  <!--<div class="form-group">-->
+    <!--<label for="Jmbg">Jmbg:</label>-->
+    <!--<input type="text" class="form-control" [(ngModel)]="admin.jmbg"  id="Jmbg" name="jmbg" #jmbg tabindex="3">-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="email">email:</label>-->
+    <!--<input type="email" class="form-control" [(ngModel)]="admin.email" id="email" name="email" #email tabindex="4">-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="password">password:</label>-->
+    <!--<input type="password" class="form-control" [(ngModel)]="admin.password" id="password" name="password" #password tabindex="5">-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="username">username:</label>-->
+    <!--<input type="text" class="form-control"  [(ngModel)]="admin.username" id="username" name="username" #username tabindex="6">-->
+  <!--</div>-->
+
+  <!--<div class="form-group">-->
+    <!--<label for="birthdate">birthdate:</label>-->
+    <!--<input type="text" class="form-control"  [(ngModel)]="admin.birthdate" id="birthdate" name="birthdate" #birthdate tabindex="7">-->
+  <!--</div>-->
+  <!--<button class="btn btn-outline-info" type="submit"   > Submit</button>-->
+
+</form>
+
+<button class="btn btn-info" (click)="goBack()"> Back</button>
+
+<!--</div>-->

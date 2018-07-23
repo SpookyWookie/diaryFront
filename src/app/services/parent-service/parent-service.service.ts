@@ -27,7 +27,7 @@ export class ParentServiceService {
   }
 
   deleteParent(id: number): Observable<any> {
-    return this.httpClient.delete<Message>('http://localhost:8080/pupils/' + id).pipe(
+    return this.httpClient.delete<Message>('http://localhost:8080/parents/' + id).pipe(
       tap(_ => this.log(`Parent Deleted!`)), catchError(this.handleError<Message>('deleteParent')));
   }
 

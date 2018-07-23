@@ -38,6 +38,17 @@ import { ScheduleItemComponent } from './components/schedule-components/schedule
 import { ScheduleEditComponent } from './components/schedule-components/schedule-edit/schedule-edit.component';
 import { ScheduleAddComponent } from './components/schedule-components/schedule-add/schedule-add.component';
 import {ScheduleService} from './services/schedule-service/schedule.service';
+import {DepartmentService} from './services/department-service/department.service';
+import { DepartmentListComponent } from './components/department-components/department-list/department-list.component';
+import { DepartmentItemComponent } from './components/department-components/department-item/department-item.component';
+import { DepartmentAddComponent } from './components/department-components/department-add/department-add.component';
+import { DepartmentEditComponent } from './components/department-components/department-edit/department-edit.component';
+import { GradeListComponent } from './components/grade-components/grade-list/grade-list.component';
+import { GradeItemComponent } from './components/grade-components/grade-item/grade-item.component';
+import { GradeEditComponent } from './components/grade-components/grade-edit/grade-edit.component';
+import { GradeAddComponent } from './components/grade-components/grade-add/grade-add.component';
+import {GradeService} from './services/grade-service/grade.service';
+import { NavbarComponent } from './components/navbar-component/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +77,16 @@ import {ScheduleService} from './services/schedule-service/schedule.service';
     ScheduleListComponent,
     ScheduleItemComponent,
     ScheduleEditComponent,
-    ScheduleAddComponent
+    ScheduleAddComponent,
+    DepartmentListComponent,
+    DepartmentItemComponent,
+    DepartmentAddComponent,
+    DepartmentEditComponent,
+    GradeListComponent,
+    GradeItemComponent,
+    GradeEditComponent,
+    GradeAddComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +94,8 @@ import {ScheduleService} from './services/schedule-service/schedule.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [MessageService, PupilService, TeacherService, ParentServiceService, AdminService, SubjectService, ScheduleService],
+  providers: [MessageService, PupilService, TeacherService, ParentServiceService, AdminService, SubjectService, ScheduleService,
+    DepartmentService, GradeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

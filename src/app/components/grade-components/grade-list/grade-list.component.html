@@ -1,0 +1,33 @@
+<div class="col-sm-12">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th>ID <button class="btn btn-link"> <span class="fa fa-sort"></span> </button> </th>
+      <th>Comment <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+      <th>Grade type <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Date of grading <button class="btn btn-link"><span class="fa fa-sort"></span> </button> </th>
+      <th>Grade value <button class="btn btn-link"><span class="fa fa-sort"></span></button> </th>
+
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let grade of grades$ | async" [routerLink]="'/grade/'+ grade.id">
+      <!--<th scope="row">{{parent.id}} </th>-->
+      <td>{{grade.id}}</td>
+      <td>{{grade.comment}}</td>
+      <td>{{grade.gradeType}}</td>
+      <td>{{grade.dateOfGrading}}</td>
+      <td>{{grade.gradeValue}}</td>
+
+      <td><button class="btn btn-link" (click)="onEditGrade(grade.id)"><span class="fa fa-edit"></span> </button> </td>
+      <td><button class="btn btn-link" (click)="deleteGrade(grade.id)"><span class="fa fa-remove"></span> </button> </td>
+    </tr>
+
+
+    </tbody>
+  </table>
+
+  <button class="btn btn-info" (click)="addGrade()"> Add Pupil</button>
+
+</div>

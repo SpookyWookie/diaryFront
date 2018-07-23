@@ -1,0 +1,27 @@
+<!--<div *ngIf="parent">-->
+<form (submit) = "addGrade(comment.value, gradeType.value, gradeDate.value, gradeValue.value)">
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <input type="text" class="form-control"  [(ngModel)]="grade.comment" id="comment" name="comment" #comment tabindex="1">
+  </div>
+  <div class="form-group">
+    <label for="gradeType">Grade type:</label>
+    <input type="text" class="form-control"  [(ngModel)]="grade.gradeType" id="gradeType" name="gradeType" #gradeType tabindex="2">
+  </div>
+  <div class="form-group">
+    <label for="gradeDate">Date of grading:</label>
+    <input type="text" class="form-control" [(ngModel)]="grade.dateOfGrading"  id="gradeDate" name="gradeDate" #gradeDate tabindex="3">
+  </div>
+  <div class="form-group">
+    <label for="gradeValue">Grade value:</label>
+    <input type="number" class="form-control" [(ngModel)]="grade.gradeValue" id="gradeValue" name="gradeValue" #gradeValue tabindex="4">
+  </div>
+
+
+  <button class="btn btn-outline-info" type="submit"   > Submit</button>
+
+</form>
+
+<button class="btn btn-info" (click)="goBack()"> Back</button>
+
+<!--</div>-->

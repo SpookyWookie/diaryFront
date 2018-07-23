@@ -49,6 +49,15 @@ export class PupilService {
         catchError(this.handleError<Pupil>('updatePupil')));
   }
 
+  searchPupils(term: string): Observable<Pupil[]> {
+    return this.httpClient
+      .get<Pupil[]>(`http://localhost:8080/pupils?username=${term}`)
+      .pipe(
+        tap(_ => this.log(`Found pupils with username "${term}"`)),
+        catchError(this.handleError<Pupil[]>('searchPupils', []))
+      );
+  }
+
   // getPupils(): Observable<Pupil[]> {
   //   return this.httpClient.get<Pupil[]>('http://localhost:8080/pupils');
   // }

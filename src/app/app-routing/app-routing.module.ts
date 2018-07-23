@@ -25,6 +25,14 @@ import {ScheduleListComponent} from '../components/schedule-components/schedule-
 import {ScheduleItemComponent} from '../components/schedule-components/schedule-item/schedule-item.component';
 import {ScheduleEditComponent} from '../components/schedule-components/schedule-edit/schedule-edit.component';
 import {ScheduleAddComponent} from '../components/schedule-components/schedule-add/schedule-add.component';
+import {DepartmentListComponent} from '../components/department-components/department-list/department-list.component';
+import {DepartmentItemComponent} from '../components/department-components/department-item/department-item.component';
+import {DepartmentEditComponent} from '../components/department-components/department-edit/department-edit.component';
+import {DepartmentAddComponent} from '../components/department-components/department-add/department-add.component';
+import {GradeListComponent} from '../components/grade-components/grade-list/grade-list.component';
+import {GradeItemComponent} from '../components/grade-components/grade-item/grade-item.component';
+import {GradeEditComponent} from '../components/grade-components/grade-edit/grade-edit.component';
+import {GradeAddComponent} from '../components/grade-components/grade-add/grade-add.component';
 
 
 const routes: Routes = [
@@ -52,7 +60,15 @@ const routes: Routes = [
   {path: 'schedules', component: ScheduleListComponent},
   {path: 'schedule/:id', component: ScheduleItemComponent},
   {path: 'schedule-edit/:id', component: ScheduleEditComponent},
-  {path: 'schedule-add', component: ScheduleAddComponent}
+  {path: 'schedule-add', component: ScheduleAddComponent},
+  {path: 'departments', component: DepartmentListComponent},
+  {path: 'department/:id', component: DepartmentItemComponent},
+  {path: 'department-edit/:id', component: DepartmentEditComponent},
+  {path: 'department-add', component: DepartmentAddComponent},
+  {path: 'grades', component: GradeListComponent},
+  {path: 'grade/:id', component: GradeItemComponent},
+  {path: 'grade-edit/:id', component: GradeEditComponent},
+  {path: 'grade-add', component: GradeAddComponent}
 ];
 
 @NgModule({

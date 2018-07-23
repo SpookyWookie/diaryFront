@@ -1,4 +1,5 @@
 <div class="col-sm-12">
+  <input type="search" class="form-control" id="searchBox" #searchBox (keyup)="search(searchBox.value)" placeholder="Search by: Username" />
   <table class="table table-striped table-hover">
     <thead>
     <tr>

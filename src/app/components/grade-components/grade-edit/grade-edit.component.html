@@ -1,0 +1,23 @@
+<div *ngIf="grade">
+  <div class="form-group">
+    <label for="comment">Name:</label>
+    <input type="text" class="form-control" [(ngModel)]="grade.comment" id="comment">
+  </div>
+  <div class="form-group">
+    <label for="gradeType">Surname:</label>
+    <input type="text" class="form-control" [(ngModel)]="grade.gradeType" id="gradeType">
+  </div>
+  <div class="form-group">
+    <label for="dateOfGrading">Jmbg:</label>
+    <input type="date" class="form-control" [(ngModel)]="grade.dateOfGrading" id="dateOfGrading">
+  </div>
+  <div class="form-group">
+    <label for="gradeValue">email:</label>
+    <input type="number" class="form-control" [(ngModel)]="grade.gradeValue" id="gradeValue">
+  </div>
+
+
+  <button class="btn btn-danger" (click)="save()"> Submit</button>
+  <button class="btn btn-info" (click)="goBack()"> Back</button>
+
+</div>
